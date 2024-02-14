@@ -11,5 +11,10 @@ pipeline {
                 sh 'ansible-playbook playbook.yml'
             }
         }
+    stage('Report in HTML') {
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            }
+        }
     }
 }
