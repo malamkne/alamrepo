@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: all
+  hosts: target
   tasks: 
     - 
       debug: var=ansible_hostname
